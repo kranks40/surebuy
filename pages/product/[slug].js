@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   AiOutlineMinus,
@@ -9,11 +8,16 @@ import {
 
 import { client, urlFor } from "../../client";
 import Product from "../../components/Product";
+import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
 
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(0);
+
+  const { decQty, incQty, qty, onAdd } = useStateContext();
+
+  const handleBuyNow = (item) => {};
 
   return (
     <div>
