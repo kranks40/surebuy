@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 // import shareVideo from "../assets/share_2.mp4";
 import logo from "../assets/logowhite.png";
 
-import { client } from "../client";
+import { client } from "../lib/client";
 
 const Login = () => {
   // const navigate = useNavigate();

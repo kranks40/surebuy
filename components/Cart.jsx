@@ -10,8 +10,8 @@ import { TiDeleteOutline } from "react-icons/ti";
 import toast from "react-hot-toast";
 
 import { useStateContext } from "../context/StateContext";
-import { urlFor } from "../client";
-import getStripe from "../getStripe";
+import { urlFor } from "../lib/client";
+import getStripe from "../lib/getStripe";
 
 const Cart = () => {
   const cartRef = useRef();

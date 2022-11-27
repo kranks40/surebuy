@@ -20,9 +20,8 @@ export default async function handler(req, res) {
             .replace(
               "image-",
                "https://cdn.sanity.io/images/i3b426bn/production/"
-              // "https://cdn.sanity.io/images/vfxfwnaw/production/"
             )
-            .replace("-jpg", ".jpg");
+            .replace("-webp", ".webp");
 
           return {
             price_data: {
