@@ -18,8 +18,8 @@ const Footer = () => {
       </p>
       <p className="icons">
         <AiFillInstagram />
-        <AiOutlineTwitter />
-        <AiFillAlert />
+        {/* <AiOutlineTwitter /> */}
+        {/* <AiFillAlert /> */}
         <AiFillCamera />
       </p>
     </div>

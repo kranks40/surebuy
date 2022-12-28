@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "surebuy"
+    "name": "ecommerce"
   },
   "api": {
-    "projectId": "i3b426bn",
+    "projectId": "x5xp74pv",
     "dataset": "production"
   },
   "plugins": [

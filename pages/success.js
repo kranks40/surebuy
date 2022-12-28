@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { BsBagCheckFill } from "react-icons/bs";
 
@@ -26,7 +26,7 @@ const Success = () => {
         <p className="email-msg">Check your email inbox for the receipt.</p>
         <p className="description">
           If you have any questions, please email
-          <a className="email" href="mailto:ketoranks29@gmail.com">
+          <a className="email" href="mailto:SureBuy">
             ketoranks29@gmail
           </a>
         </p>

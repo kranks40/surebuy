@@ -7,19 +7,19 @@ import {
 } from "react-icons/ai";
 
 import { client, urlFor } from "../../lib/client";
-import Product from "../../components/Product";
+import { Product } from "../../components";
 import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
-
   const [index, setIndex] = useState(0);
-
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
-  const handleBuyNow = () => {};
-  onAdd(product, qty);
-  setShowCart(true);
+  const handleBuyNow = () => {
+    onAdd(product, qty);
+
+    setShowCart(true);
+  };
 
   return (
     <div>
@@ -103,15 +103,16 @@ const ProductDetails = ({ product, products }) => {
 
 export const getStaticPaths = async () => {
   const query = `*[_type == "product"] {
-        slug {
-            current
-        }
-    }`;
+    slug {
+      current
+    }
+  }`;
 
   const products = await client.fetch(query);
+
   const paths = products.map((product) => ({
     params: {
-      slug: product.slug.current,
+      slug: product.slug.current
     },
   }));
 
@@ -123,9 +124,10 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
-  const productsQuery = '*[_type == "product"]';
-
   const product = await client.fetch(query);
+  
+  const productsQuery = `*[_type == "product"]`;
+
   const products = await client.fetch(productsQuery);
 
   return {
